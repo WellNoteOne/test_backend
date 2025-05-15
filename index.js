@@ -3,7 +3,7 @@ const morgan = require("morgan");
 const app = express();
 const cors = require("cors");
 app.use(cors());
-
+app.use(express.static("dist"));
 app.use(express.json());
 
 morgan.token("body", function (request) {
@@ -14,7 +14,7 @@ morgan.token("timestamp", () => {
     hour12: false,
   });
 });
-app.use(express.static("dist"));
+
 app.use(morgan(`:timestamp :method: :url status: :status :body`));
 
 let notes = [
