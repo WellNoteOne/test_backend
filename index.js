@@ -35,9 +35,9 @@ let notes = [
   },
 ];
 
-app.get("/", (request, response) => {
-  response.send("<h1>Hello wrld 1</h1>");
-});
+// app.get("/", (request, response) => {
+//   response.send("<h1>Hello wrld 1</h1>");
+// });
 
 app.get("/api/notes", (request, response) => {
   response.json(notes);
