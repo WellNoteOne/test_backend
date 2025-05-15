@@ -14,7 +14,7 @@ morgan.token("timestamp", () => {
     hour12: false,
   });
 });
-
+app.use(express.static("dist"));
 app.use(morgan(`:timestamp :method: :url status: :status :body`));
 
 let notes = [
@@ -101,4 +101,3 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`Server is runninig on port ${PORT}`);
 });
-app.use(express.static("dist"));
