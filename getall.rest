@@ -10,7 +10,7 @@ Content-Type: application/json
 GET http://100.20.92.101:3001/api/notes
 Content-Type: application/json
 ###
-DELETE  http://localhost:3001/api/notes/1
+GET  http://44.227.217.144:3001/api/notes/1
 Content-Type: application/json
 ###
 GET http://100.20.92.101:3001/api/notes/2
